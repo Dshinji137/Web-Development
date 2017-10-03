@@ -1,0 +1,70 @@
+<html>
+    
+    <head>
+        <title>Javascript</title>
+        
+        <style type="text/css">
+        </style>
+    
+    
+    </head>
+    
+    
+    <body>
+        <p>
+            <select id="myNum">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </p>
+        
+        <button id="guess">Guess</button>
+        
+        <script type="text/javascript">
+            
+            function doAGuess(ans) {
+                var guess = Math.floor(Math.random()*6);
+                if(guess == ans) {
+                    return true;
+                }
+                return false;
+            }
+            
+            document.getElementById("guess").onclick = function() {
+                var myNumber = document.getElementById("myNum").value;
+                var gotIt = false;
+                var numberGuess = 1;
+                while(gotIt == false) {
+                    gotIt = doAGuess(myNumber);
+                    if(gotIt == true) {
+                        alert("got it. It takes "+numberGuess+" guesses");
+                    }
+                    else {
+                        numberGuess++;
+                    }
+                }
+            }
+            
+        
+            
+        </script>
+        
+    </body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
