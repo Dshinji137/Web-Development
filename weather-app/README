@@ -1,0 +1,9 @@
+To run the program:
+(1) cd into the file, then in terminal, execute:
+  npm install
+it will install all the 3rd party needed in this program.
+(2) Then run the program with:
+  node app.js [area code]
+ 
+Now the program is not advanced enough, for it does not have a user interface, and user can only get weather information by typing the 
+area code, further improving is to be done.
